@@ -24,8 +24,11 @@ OpenSourceAerospaceEcosystem/
 │       ├── 08_cases_feasibility.md        # 第 8 章 案例分析与可行性论证
 │       └── 09_conclusion_references.md    # 第 9 章 结论与展望 + 参考文献
 └── paper/
-    ├── full_paper.md                  # 完整论文（合成稿，约 1.6 万字符）
-    └── main.tex                       # arXiv 投稿用 LaTeX 模板骨架（英文版）
+    ├── full_paper.md                  # 完整论文合成稿（Markdown，中文）
+    ├── main_zh.tex                    # 中文版 LaTeX（xelatex + ctex 编译）
+    ├── main_en.tex                    # 英文版 LaTeX（arXiv 投稿版，pdflatex 编译）
+    ├── main_zh.pdf                    # 中文版 PDF（14 页）
+    └── main_en.pdf                    # 英文版 PDF（14 页）
 ```
 
 ## 核心观点
@@ -57,6 +60,9 @@ OpenSourceAerospaceEcosystem/
 - [x] 第 8 章 案例分析与可行性论证
 - [x] 第 9 章 结论与展望 + 参考文献
 - [x] 完整论文合成稿（paper/full_paper.md）
-- [ ] 补全待核实文献（[23] 占位）
-- [ ] 英文版翻译与 LaTeX 排版
-- [ ] arXiv 投稿
+- [x] 参考文献补全（23 条，全部真实，含软件定义卫星中文文献）
+- [x] 英文版翻译（paper/main_en.tex，arXiv 版）
+- [x] 中文版 PDF（main_zh.pdf）
+- [x] 英文版 PDF（main_en.pdf）
+- [ ] 确认作者信息（main_en.tex / main_zh.tex 中为占位）
+- [ ] arXiv 投稿（提交 main_en.tex 及引文文件）

@@ -12,9 +12,20 @@ OpenSourceAerospaceEcosystem/
 ├── docs/
 │   ├── 01_abstract_keywords.md        # 摘要 + 关键词（已定稿）
 │   ├── 02_outline.md                  # 论文大纲（已定稿）
-│   └── 03_concept_mapping_table.md    # 概念映射表（计算机原型 → 开源航天新形态）
+│   ├── 03_concept_mapping_table.md    # 概念映射表（计算机原型 → 开源航天新形态）
+│   └── chapters/
+│       ├── 01_introduction.md         # 第 1 章 引言
+│       ├── 02_literature_review.md    # 第 2 章 文献综述与理论基础
+│       ├── 03_computer_history_lessons.md # 第 3 章 计算机发展史经验提炼
+│       ├── 04_ecosystem_architecture.md   # 第 4 章 开源航天生态总体架构
+│       ├── 05_simulation_platform.md      # 第 5 章 深空仿真平台构建路径
+│       ├── 06_security_governance.md      # 第 6 章 安全、信任与治理机制
+│       ├── 07_business_model.md           # 第 7 章 商业模式与可持续发展
+│       ├── 08_cases_feasibility.md        # 第 8 章 案例分析与可行性论证
+│       └── 09_conclusion_references.md    # 第 9 章 结论与展望 + 参考文献
 └── paper/
-    └── main.tex                       # arXiv 投稿用 LaTeX 模板骨架
+    ├── full_paper.md                  # 完整论文（合成稿，约 1.6 万字符）
+    └── main.tex                       # arXiv 投稿用 LaTeX 模板骨架（英文版）
 ```
 
 ## 核心观点
@@ -36,7 +47,16 @@ OpenSourceAerospaceEcosystem/
 - [x] 摘要 + 关键词
 - [x] 论文大纲
 - [x] 概念映射表
-- [ ] 文献综述（第 2 章）
-- [ ] 计算机发展史经验提炼（第 3 章）
-- [ ] 正文各章
-- [ ] LaTeX 排版与 arXiv 投稿
+- [x] 第 1 章 引言
+- [x] 第 2 章 文献综述与理论基础
+- [x] 第 3 章 计算机发展史经验提炼
+- [x] 第 4 章 开源航天生态总体架构
+- [x] 第 5 章 深空仿真平台构建路径
+- [x] 第 6 章 安全、信任与治理机制
+- [x] 第 7 章 商业模式与可持续发展
+- [x] 第 8 章 案例分析与可行性论证
+- [x] 第 9 章 结论与展望 + 参考文献
+- [x] 完整论文合成稿（paper/full_paper.md）
+- [ ] 补全待核实文献（[23] 占位）
+- [ ] 英文版翻译与 LaTeX 排版
+- [ ] arXiv 投稿

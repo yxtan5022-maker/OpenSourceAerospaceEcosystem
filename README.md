@@ -25,11 +25,18 @@ OpenSourceAerospaceEcosystem/
 │       └── 09_conclusion_references.md    # 第 9 章 结论与展望 + 参考文献
 └── paper/
     ├── full_paper.md                  # 完整论文合成稿（Markdown，中文）
-    ├── main_zh.tex                    # 中文版 LaTeX（xelatex + ctex 编译）
-    ├── main_en.tex                    # 英文版 LaTeX（arXiv 投稿版，pdflatex 编译）
-    ├── main_zh.pdf                    # 中文版 PDF（18 页）
-    └── main_en.pdf                    # 英文版 PDF（21 页）
+    ├── main_zh.tex                    # 中文版 LaTeX（xelatex + ctex 编译）——当前最新版
+    ├── main_en.tex                    # 英文版 LaTeX（arXiv 投稿版，pdflatex 编译）——当前最新版
+    ├── main_zh.pdf                    # 中文版 PDF（19 页）
+    ├── main_en.pdf                    # 英文版 PDF（22 页）
+    ├── VERSIONS.md                    # 版本清单（每次迭代归档旧版 + 变更说明）
+    └── versions/
+        ├── v1_sidewaystable/          # 旧版：sidewaystable 旋转表格（标题倒向）
+        └── v2_pdflscape_blank/        # 旧版：pdflscape 但有空白横版页 bug
 ```
+
+> 版本规则：最新版不带版本号放在 `paper/` 根目录；每迭代一次，把被替换的旧版（tex+pdf）复制到
+> `paper/versions/vN_名称/` 并登记到 `VERSIONS.md`。
 
 ## 作者
 
@@ -69,7 +76,9 @@ OpenSourceAerospaceEcosystem/
 - [x] 量化数据章节（GitHub Octoverse 2024、Sonatype 2024、LWN 2023、Kulu IAC 2024、SIA SSIR 2024）
 - [x] 排版重构（几何页面版式、标题字体样式、题头摘要区、横排表格）
 - [x] 英文版翻译（paper/main_en.tex，arXiv 版）
-- [x] 中文版 PDF 重编译（main_zh.pdf，18 页）
-- [x] 英文版 PDF 重编译（main_en.pdf，21 页）
+- [x] 中文版 PDF 重编译（main_zh.pdf，19 页）
+- [x] 英文版 PDF 重编译（main_en.pdf，22 页）
+- [x] 横版表格修复（pdflscape 真横版页，标题正读；消除空白页，v3）
+- [x] 版本化归档（paper/VERSIONS.md + paper/versions/v1、v2 旧版）
 - [ ] 确认单位信息（tex 中为"单位：待补充"占位）
 - [ ] arXiv 投稿（提交 main_en.tex 及引文文件）

@@ -33,7 +33,6 @@
 \titlespacing*{\subsection}{0pt}{0.9em}{0.4em}
 
 \captionsetup{font=small,labelfont=bf}
-\setlength{\tabcolsep}{4pt}
 
 \title{\heiti\LARGE 借鉴计算机发展史构建开源航天技术共享生态与深空仿真平台的路径研究}
 \author{陈 勇 勋\thanks{通讯作者，E-mail：yxtan5022@gmail.com。单位：待补充。}\\
@@ -111,7 +110,6 @@
 \begin{landscape}
 \vfill
 \centering
-\small
 \captionof{table}{开放生态规模效应的量化证据}
 \label{tab:data}
 \begin{tabularx}{\textheight}{@{}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
@@ -136,21 +134,20 @@
 \begin{landscape}
 \vfill
 \centering
-\small
 \captionof{table}{计算机发展史与开源航天新形态的概念映射}
 \label{tab:mapping}
 \begin{tabularx}{\textheight}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
 \toprule
-计算机发展史（借鉴原型） & 现代计算机对应技术 & 论文提出的"开源航天新形态" & 核心价值与解决的关键问题 \\
+计算机发展史（借鉴原型） & 现代计算机对应技术 & 论文提出的"开源航天新形态" & 核心学术价值/解决问题 \\
 \midrule
-开源社区协作 & Linux / Git / GitHub & OpenSpace 研发生态 & 打破垄断，降低研发门槛 \\
-软硬件解耦 & POSIX 标准 / HAL 抽象层 & 航天器通用操作系统（Space OS） & 避免"一星一密"，应用跨硬件复用 \\
-虚拟化与模拟 & QEMU / SITL / 游戏引擎 & 深空数字孪生与仿真 App & 无需物理硬件即可验证算法 \\
-模块化服务 & Docker / 微服务架构 & 微服务化卫星/载荷架构 & 抗单点故障，模块可替换 \\
-代码交付保障 & CI/CD 自动化测试流水线 & DevSpaceOps 云端仿真验证 & 极端环境下自动化高可靠测试 \\
-生态复用 & npm / PyPI 包管理器 & 航天组件/算法注册表（Space PM） & 避免重复造轮子，加速迭代 \\
-开放商业闭环 & Red Hat / MySQL / Android 双重许可 & 开源底座 + 商业定制服务模式 & 解决资金来源与可持续性 \\
-容错与分布式信任 & BFT 共识 / 零信任架构 & 零信任深空计算网络与安全基线 & 社区代码不危及航天核心安全 \\
+开源社区协作 & Linux / Git / GitHub & OpenSpace 研发生态 & 打破国家与巨头垄断，降低研发门槛 \\
+软硬件解耦 & POSIX 标准 / HAL 抽象层 & 航天器通用操作系统（Space OS） & 避免"一星一密"，实现应用跨硬件复用 \\
+虚拟化与模拟 & QEMU / SITL / 游戏引擎 & 深空数字孪生与仿真 App & 无需物理硬件即可验证算法与轨道逻辑 \\
+模块化服务 & Docker / 微服务架构 & 微服务化卫星/载荷架构 & 提高抗单点故障能力与模块替换效率 \\
+代码交付保障 & CI/CD 自动化测试流水线 & DevSpaceOps 云端仿真验证 & 极端深空环境下自动化高可靠性测试 \\
+生态复用 & npm / PyPI 包管理器 & 航天组件/算法注册表（Space PM） & 避免重复造轮子，加速技术迭代 \\
+开放商业闭环 & Red Hat / MySQL / Android 双重许可 & 开源底座 + 商业定制服务模式 & 解决开源航天资金来源与可持续性 \\
+容错与分布式信任 & BFT 共识 / 零信任架构 & 零信任深空计算网络与安全基线 & 保障社区贡献代码不影响航天器核心安全 \\
 \bottomrule
 \end{tabularx}
 \vfill

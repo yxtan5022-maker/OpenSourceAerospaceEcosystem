@@ -11,7 +11,7 @@
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{setspace}
-\usepackage{rotating}
+\usepackage{pdflscape}
 \usepackage{enumitem}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 
@@ -107,11 +107,12 @@
 
 对照航天领域，开放模式同样显现出规模效应：Nanosats 数据库统计显示，截至 2024 年 9 月全球已发射纳卫星 2714 颗（其中 CubeSat 2505 颗），2023 年单年发射 390 颗创历史纪录；CubeSat 发射总数突破第二个一千颗仅用时约 4 年，而第一个一千颗历时约 16 年（2003—2018），共有 88 个国家、600 余个组织参与其中\cite{kulu2024}。商业卫星产业方面，SIA 报告显示 2023 年全球卫星产业收入约 2850 亿美元，占全球太空经济（约 4000 亿美元）的 71\%；在轨活跃卫星达 9691 颗，较 2019 年增长 361\%；同年部署商业卫星 2781 颗，较上年增长 20\%\cite{sia2024}。NASA 亦通过其软件发布机构（SRA）公开了数以百计的开源软件与代码仓库\cite{nasa}。上述数据表明，开放共享与标准化在计算机产业和航天产业中都带来了参与主体数量、知识资产规模与迭代速度的数量级跃升，为本文的生态构想提供了实证基础。关键指标见表~\ref{tab:data}。
 
-\begin{sidewaystable}
+\begin{landscape}
+\vfill
 \centering
-\caption{开放生态规模效应的量化证据}
+\captionof{table}{开放生态规模效应的量化证据}
 \label{tab:data}
-\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\begin{tabularx}{\textheight}{@{}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
 \toprule
 维度 & 计算机开放生态 & 开源航天实践 \\
 \midrule
@@ -121,7 +122,8 @@
 经济规模 & — & 2023 年卫星产业收入约 2850 亿美元，占太空经济 71\%；在轨活跃卫星 9691 颗（5 年 +361\%）\cite{sia2024} \\
 \bottomrule
 \end{tabularx}
-\end{sidewaystable}
+\vfill
+\end{landscape}
 
 \subsection{共性规律提炼}
 综合上述六条路径，可以凝练出六条共性规律：（1）开放共享——知识的自由流动是生态生长的前提；（2）标准先行——接口的开放比实现的开放更具杠杆效应；（3）分层解耦——把系统复杂度转化为可独立演进的模块边界；（4）仿真先行——以低成本验证支撑高可靠交付；（5）安全兜底——分布式协作必须以信任机制与容错设计为边界；（6）商业反哺——可持续生态需要自我造血的商业闭环。
@@ -129,11 +131,12 @@
 \subsection{概念映射表}
 将上述经验映射到航天领域，得到如表~\ref{tab:mapping} 所示的概念映射表，作为后续各章论证的枢纽。
 
-\begin{sidewaystable}
+\begin{landscape}
+\vfill
 \centering
-\caption{计算机发展史与开源航天新形态的概念映射}
+\captionof{table}{计算机发展史与开源航天新形态的概念映射}
 \label{tab:mapping}
-\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\begin{tabularx}{\textheight}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
 \toprule
 计算机发展史（借鉴原型） & 现代计算机对应技术 & 论文提出的"开源航天新形态" & 核心学术价值/解决问题 \\
 \midrule
@@ -147,7 +150,8 @@
 容错与分布式信任 & BFT 共识 / 零信任架构 & 零信任深空计算网络与安全基线 & 保障社区贡献代码不影响航天器核心安全 \\
 \bottomrule
 \end{tabularx}
-\end{sidewaystable}
+\vfill
+\end{landscape}
 
 \section{开源航天技术共享生态总体架构设计}
 \subsection{总体架构蓝图}

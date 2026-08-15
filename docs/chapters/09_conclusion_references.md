@@ -65,3 +65,13 @@
 [22] 中华人民共和国国务院新闻办公室. 2021 中国的航天[M]. 北京: 人民出版社, 2022.
 
 [23] 徐帆江, 周鑫, 赵军锁, 等. 软件定义卫星技术概念及发展[J]. 北京航空航天大学学报, 2023, 49(7): 1543-1552.
+
+[24] GitHub. Octoverse 2024: The State of Open Source and Rise of AI in Software Development[EB/OL]. 2024. https://github.blog/news-insights/octoverse/octoverse-2024/.
+
+[25] Sonatype. 2024 State of the Software Supply Chain[R]. 2024.
+
+[26] Corbet J. Development Statistics for 6.3[EB/OL]. LWN.net, 2023. https://lwn.net/Articles/929582/.
+
+[27] Kulu E. CubeSats & Nanosatellites — 2024 Statistics, Forecast and Reliability[C]//75th International Astronautical Congress (IAC 2024). 2024.
+
+[28] Satellite Industry Association. State of the Satellite Industry Report 2024[R]. Washington, D.C.: SIA, 2024.

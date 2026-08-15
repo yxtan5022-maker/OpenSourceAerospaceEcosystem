@@ -27,9 +27,14 @@ OpenSourceAerospaceEcosystem/
     ├── full_paper.md                  # 完整论文合成稿（Markdown，中文）
     ├── main_zh.tex                    # 中文版 LaTeX（xelatex + ctex 编译）
     ├── main_en.tex                    # 英文版 LaTeX（arXiv 投稿版，pdflatex 编译）
-    ├── main_zh.pdf                    # 中文版 PDF（14 页）
-    └── main_en.pdf                    # 英文版 PDF（14 页）
+    ├── main_zh.pdf                    # 中文版 PDF（18 页）
+    └── main_en.pdf                    # 英文版 PDF（21 页）
 ```
+
+## 作者
+
+- **Y. X. Tan**（谭 宇 轩，中文名待确认），E-mail：yxtan5022@gmail.com
+- 单位：待补充
 
 ## 核心观点
 
@@ -43,7 +48,7 @@ OpenSourceAerospaceEcosystem/
 
 ## 学术层次
 
-本科/硕士课程论文，方法以历史比较 + 案例分析 + 概念映射为主。
+本科/硕士课程论文，方法以历史比较 + 案例分析 + 概念映射 + 统计数据分析为主。
 
 ## 进度
 
@@ -52,17 +57,19 @@ OpenSourceAerospaceEcosystem/
 - [x] 概念映射表
 - [x] 第 1 章 引言
 - [x] 第 2 章 文献综述与理论基础
-- [x] 第 3 章 计算机发展史经验提炼
+- [x] 第 3 章 计算机发展史经验提炼（含 3.6 量化证据与数据表）
 - [x] 第 4 章 开源航天生态总体架构
 - [x] 第 5 章 深空仿真平台构建路径
 - [x] 第 6 章 安全、信任与治理机制
 - [x] 第 7 章 商业模式与可持续发展
-- [x] 第 8 章 案例分析与可行性论证
+- [x] 第 8 章 案例分析与可行性论证（并入 NASA/CubeSat/SIA 数据）
 - [x] 第 9 章 结论与展望 + 参考文献
 - [x] 完整论文合成稿（paper/full_paper.md）
-- [x] 参考文献补全（23 条，全部真实，含软件定义卫星中文文献）
+- [x] 参考文献补全（28 条，全部真实；[23] 软件定义卫星中文文献，[24]-[28] GitHub/npm/Linux/CubeSat/SIA 数据来源）
+- [x] 量化数据章节（GitHub Octoverse 2024、Sonatype 2024、LWN 2023、Kulu IAC 2024、SIA SSIR 2024）
+- [x] 排版重构（几何页面版式、标题字体样式、题头摘要区、横排表格）
 - [x] 英文版翻译（paper/main_en.tex，arXiv 版）
-- [x] 中文版 PDF（main_zh.pdf）
-- [x] 英文版 PDF（main_en.pdf）
-- [ ] 确认作者信息（main_en.tex / main_zh.tex 中为占位）
+- [x] 中文版 PDF 重编译（main_zh.pdf，18 页）
+- [x] 英文版 PDF 重编译（main_en.pdf，21 页）
+- [ ] 确认中文姓名与单位（tex 中为"谭 宇 轩"推断名 + "单位：待补充"占位）
 - [ ] arXiv 投稿（提交 main_en.tex 及引文文件）

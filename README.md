@@ -33,7 +33,7 @@ OpenSourceAerospaceEcosystem/
 
 ## 作者
 
-- **Y. X. Tan**（谭 宇 轩，中文名待确认），E-mail：yxtan5022@gmail.com
+- **Y. X. Tan**（陈 勇 勋），E-mail：yxtan5022@gmail.com
 - 单位：待补充
 
 ## 核心观点
@@ -71,5 +71,5 @@ OpenSourceAerospaceEcosystem/
 - [x] 英文版翻译（paper/main_en.tex，arXiv 版）
 - [x] 中文版 PDF 重编译（main_zh.pdf，18 页）
 - [x] 英文版 PDF 重编译（main_en.pdf，21 页）
-- [ ] 确认中文姓名与单位（tex 中为"谭 宇 轩"推断名 + "单位：待补充"占位）
+- [ ] 确认单位信息（tex 中为"单位：待补充"占位）
 - [ ] arXiv 投稿（提交 main_en.tex 及引文文件）

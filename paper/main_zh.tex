@@ -1,8 +1,9 @@
-% 中文版论文 —— 编译方式：xelatex main_zh.tex（至少编译两次）
-% 作者：Y. X. Tan（单位待补充）
+% main_zh.tex — 中文版论文
+% 编译方式：xelatex main_zh.tex（至少编译两次）
+% 作者：Y. X. Tan（陈勇勋）
 \documentclass[UTF8,a4paper,zihao=-4]{ctexart}
 
-\usepackage[top=2.8cm,bottom=3.0cm,left=3.0cm,right=2.6cm]{geometry}
+\usepackage[top=2.8cm,bottom=3.0cm,left=3.0cm,right=2.6cm,headheight=14pt]{geometry}
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs}
 \usepackage{tabularx}
@@ -18,14 +19,12 @@
 \linespread{1.35}
 \setlength{\parindent}{2em}
 
-% ---------- 页眉页脚 ----------
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[C]{\songti\small 借鉴计算机发展史构建开源航天技术共享生态与深空仿真平台的路径研究}
 \fancyfoot[C]{\small\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 
-% ---------- 标题样式 ----------
 \titleformat{\section}{\Large\heiti}{\thesection}{0.6em}{}
 \titleformat{\subsection}{\large\heiti}{\thesubsection}{0.6em}{}
 \titleformat{\subsubsection}{\normalsize\heiti}{\thesubsubsection}{0.6em}{}
@@ -109,22 +108,22 @@
 对照航天领域，开放模式同样显现出规模效应：Nanosats 数据库统计显示，截至 2024 年 9 月全球已发射纳卫星 2714 颗（其中 CubeSat 2505 颗），2023 年单年发射 390 颗创历史纪录；CubeSat 发射总数突破第二个一千颗仅用时约 4 年，而第一个一千颗历时约 16 年（2003—2018），共有 88 个国家、600 余个组织参与其中\cite{kulu2024}。商业卫星产业方面，SIA 报告显示 2023 年全球卫星产业收入约 2850 亿美元，占全球太空经济（约 4000 亿美元）的 71\%；在轨活跃卫星达 9691 颗，较 2019 年增长 361\%；同年部署商业卫星 2781 颗，较上年增长 20\%\cite{sia2024}。NASA 亦通过其软件发布机构（SRA）公开了数以百计的开源软件与代码仓库\cite{nasa}。上述数据表明，开放共享与标准化在计算机产业和航天产业中都带来了参与主体数量、知识资产规模与迭代速度的数量级跃升，为本文的生态构想提供了实证基础。关键指标见表~\ref{tab:data}。
 
 \begin{landscape}
-\vfill
+\begin{table*}[htbp]
 \centering
 \small
-\captionof{table}{开放生态规模效应的量化证据}
+\caption{开放生态规模效应的量化证据}
 \label{tab:data}
-\begin{tabularx}{\textheight}{@{}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{2.0cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
 \toprule
 维度 & 计算机开放生态 & 开源航天实践 \\
 \midrule
-协作规模 & GitHub 开发者超 1 亿、项目超 5.18 亿；2024 年贡献 52 亿次\cite{octoverse2024} & 全球已发射 CubeSat 2505 颗，88 个国家、600 余个组织参与\cite{kulu2024} \\
-组件与资产 & npm 约 487.5 万包、PyPI 约 63.5 万包；2023 年请求量约 6.689 万亿次\cite{sonatype2024} & NASA 公开"数以百计"的开源软件与代码仓库\cite{nasa} \\
+协作规模 & GitHub 超 1 亿开发者、5.18 亿项目；2024 年贡献 52 亿次\cite{octoverse2024} & 全球已发射 CubeSat 2505 颗，88 国、600+ 组织参与\cite{kulu2024} \\
+组件资产 & npm 约 487.5 万包、PyPI 约 63.5 万包；年请求约 6.689 万亿次\cite{sonatype2024} & NASA 公开数百个开源软件与代码仓库\cite{nasa} \\
 迭代速度 & Linux 每约 10 周一大版本，每版约 1.5 万提交、2000 名开发者\cite{lwn2023} & CubeSat 第二千颗用时约 4 年（首个千颗约 16 年）\cite{kulu2024} \\
-经济规模 & — & 2023 年卫星产业收入约 2850 亿美元，占太空经济 71\%；在轨活跃卫星 9691 颗（5 年 +361\%）\cite{sia2024} \\
+经济规模 & --- & 2023 年卫星产业收入约 2850 亿美元，占太空经济 71\%；在轨卫星 9691 颗（5 年 +361\%）\cite{sia2024} \\
 \bottomrule
 \end{tabularx}
-\vfill
+\end{table*}
 \end{landscape}
 
 \subsection{共性规律提炼}
@@ -134,12 +133,12 @@
 将上述经验映射到航天领域，得到如表~\ref{tab:mapping} 所示的概念映射表，作为后续各章论证的枢纽。
 
 \begin{landscape}
-\vfill
+\begin{table*}[htbp]
 \centering
 \small
-\captionof{table}{计算机发展史与开源航天新形态的概念映射}
+\caption{计算机发展史与开源航天新形态的概念映射}
 \label{tab:mapping}
-\begin{tabularx}{\textheight}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
 \toprule
 计算机发展史（借鉴原型） & 现代计算机对应技术 & 论文提出的"开源航天新形态" & 核心价值与解决的关键问题 \\
 \midrule
@@ -153,7 +152,7 @@
 容错与分布式信任 & BFT 共识 / 零信任架构 & 零信任深空计算网络与安全基线 & 社区代码不危及航天核心安全 \\
 \bottomrule
 \end{tabularx}
-\vfill
+\end{table*}
 \end{landscape}
 
 \section{开源航天技术共享生态总体架构设计}

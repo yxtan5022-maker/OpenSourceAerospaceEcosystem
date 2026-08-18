@@ -12,7 +12,6 @@
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{setspace}
-\usepackage{pdflscape}
 \usepackage{enumitem}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 
@@ -32,7 +31,7 @@
 \titlespacing*{\subsection}{0pt}{0.9em}{0.4em}
 
 \captionsetup{font=small,labelfont=bf}
-\setlength{\tabcolsep}{4pt}
+\setlength{\tabcolsep}{3pt}
 
 \title{Pathways to Building an Open-Source Aerospace Technology Sharing Ecosystem and Deep-Space Simulation Platform Informed by the History of Computer Development}
 \author{Y. X. Tan\thanks{Corresponding author, E-mail: yxtan5022@gmail.com. Affiliation: TBD.}}
@@ -103,24 +102,22 @@ The laws above are not only logically self-consistent but also supported by macr
 
 By comparison, openness in the aerospace domain has also shown a scale effect: according to the Nanosats database, by September 2024, 2,714 nanosatellites had been launched worldwide (including 2,505 CubeSats), and a record 390 nanosatellites were launched in 2023 alone; the cumulative number of CubeSats passed the second thousand in only about four years, whereas the first thousand took about sixteen years (2003--2018), with 88 countries and more than 600 organizations involved \cite{kulu2024}. In the commercial satellite industry, the SIA reports that 2023 global satellite industry revenue reached about USD 285 billion, accounting for 71\% of the global space economy (about USD 400 billion); active satellites in orbit totaled 9,691, up 361\% from 2019; and 2,781 commercial satellites were deployed in the year, up 20\% year on year \cite{sia2024}. NASA has also publicly released hundreds of software programs and code repositories through its Software Release Authority (SRA) \cite{nasa}. These figures show that openness and standardization have brought order-of-magnitude increases in the number of participants, the scale of knowledge assets and the speed of iteration in both the computer and aerospace industries, providing empirical support for the ecosystem vision of this paper. Key indicators are summarized in Table~\ref{tab:data}.
 
-\begin{landscape}
-\begin{table*}[htbp]
+\begin{table}[htbp]
 \centering
-\small
+\footnotesize
 \caption{Quantitative evidence of the scale effect of open ecosystems}
 \label{tab:data}
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{2.4cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{1.8cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
 \toprule
 Dimension & Computer open ecosystem & Open-source aerospace practice \\
 \midrule
-Collaboration scale & GitHub: 100M+ developers, 518M+ projects; 5.2B contributions in 2024 \cite{octoverse2024} & 2,505 CubeSats launched, 88 countries, 600+ organizations \cite{kulu2024} \\
-Components \& assets & npm $\sim$4.875M packages, PyPI $\sim$635K packages; $\sim$6.689T requests in 2023 \cite{sonatype2024} & NASA released hundreds of open-source software programs \cite{nasa} \\
-Iteration speed & Linux: major release every $\sim$10 weeks, $\sim$15K commits, $\sim$2,000 developers each \cite{lwn2023} & Second thousand CubeSats in $\sim$4 years (first thousand took $\sim$16 years) \cite{kulu2024} \\
-Economic scale & --- & 2023 satellite industry revenue $\sim$USD 285B (71\% of space economy); 9,691 active satellites (+361\% in 5 years) \cite{sia2024} \\
+Collaboration & GitHub: 100M+ devs, 518M+ projects; 5.2B contributions in 2024 \cite{octoverse2024} & 2,505 CubeSats, 88 countries, 600+ orgs \cite{kulu2024} \\
+Components & npm $\sim$4.875M pkgs, PyPI $\sim$635K pkgs; $\sim$6.689T requests in 2023 \cite{sonatype2024} & NASA released hundreds of open-source programs \cite{nasa} \\
+Iteration & Linux: major release every $\sim$10 wks, $\sim$15K commits, $\sim$2K devs \cite{lwn2023} & 2nd 1000 CubeSats in $\sim$4 yrs (1st took $\sim$16 yrs) \cite{kulu2024} \\
+Economic & --- & 2023 satellite revenue $\sim$USD 285B (71\% of space economy); 9,691 active sats (+361\%) \cite{sia2024} \\
 \bottomrule
 \end{tabularx}
-\end{table*}
-\end{landscape}
+\end{table}
 
 \subsection{Common Patterns}
 Synthesizing the six paths above, six common laws can be distilled: (1) \emph{openness and sharing}---the free flow of knowledge is the precondition for ecosystem growth; (2) \emph{standards first}---open interfaces have more leverage than open implementations; (3) \emph{layered decoupling}---transform system complexity into independently evolvable module boundaries; (4) \emph{simulation first}---low-cost verification supports high-reliability delivery; (5) \emph{security as a safety net}---distributed collaboration must be bounded by trust mechanisms and fault-tolerant design; and (6) \emph{commercial feedback}---a sustainable ecosystem requires a self-funded business loop.
@@ -128,28 +125,26 @@ Synthesizing the six paths above, six common laws can be distilled: (1) \emph{op
 \subsection{Concept Mapping}
 Mapping these lessons to the aerospace domain yields the concept-mapping table shown in Table~\ref{tab:mapping}, which serves as the pivot of the subsequent chapters.
 
-\begin{landscape}
-\begin{table*}[htbp]
+\begin{table}[htbp]
 \centering
-\small
+\footnotesize
 \caption{Concept mapping from computer history to the open-source aerospace ecosystem}
 \label{tab:mapping}
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{2.8cm}>{\raggedright\arraybackslash}p{2.8cm}>{\raggedright\arraybackslash}p{2.8cm}>{\raggedright\arraybackslash}p{2.8cm}@{}}
 \toprule
 Prototype & Modern computing & Proposed aerospace form & Core value \\
 \midrule
-Open-source collaboration & Linux/Git/GitHub & OpenSpace R\&D ecosystem & Break monopolies, lower entry barriers \\
-H/W--S/W decoupling & POSIX/HAL & Spacecraft OS (Space OS) & Avoid one-satellite custom builds; cross-hardware reuse \\
-Virtualization & QEMU/SITL/game engines & Deep-space digital twin \& simulation apps & Verify algorithms without physical hardware \\
-Modular services & Docker/microservices & Microservice satellite/payload architecture & Fault isolation and module replacement \\
-Delivery pipelines & CI/CD automation & DevSpaceOps cloud simulation verification & Automated reliability testing in extreme space \\
-Ecosystem reuse & npm/PyPI package managers & Space Package Registry (Space PM) & Avoid re-inventing the wheel, accelerate iteration \\
-Open business loop & Red Hat/MySQL/Android dual licensing & Open base + commercial services & Sustainable funding for open-source aerospace \\
-Fault tolerance & BFT consensus/zero trust & Zero-trust deep-space computing network & Community code cannot break the core safety baseline \\
+Open-source collab. & Linux/Git/GitHub & OpenSpace R\&D ecosystem & Break monopolies, lower barriers \\
+H/W--S/W decoupling & POSIX/HAL & Space OS & Avoid one-satellite builds; reuse \\
+Virtualization & QEMU/SITL/game engines & Deep-space digital twin & Verify algorithms w/o hardware \\
+Modular services & Docker/microservices & Microservice sat./payload arch. & Fault isolation, module replacement \\
+Delivery pipelines & CI/CD automation & DevSpaceOps cloud sim. verification & Automated extreme-condition testing \\
+Ecosystem reuse & npm/PyPI package mgrs & Space Package Registry & Avoid reinventing the wheel \\
+Open business loop & Red Hat/MySQL/Android & Open base + commercial services & Sustainable funding for open-source \\
+Fault tolerance & BFT/zero trust & Zero-trust deep-space network & Code cannot break safety baseline \\
 \bottomrule
 \end{tabularx}
-\end{table*}
-\end{landscape}
+\end{table}
 
 \section{Architecture of the Open-Source Aerospace Ecosystem}
 \subsection{Overall Architecture Blueprint}
